@@ -1,0 +1,105 @@
+.nav-element {
+  position: relative;
+
+  &:first-of-type {
+    padding: 1em 0em;
+    border-bottom: 1px solid #343434;
+  }
+}
+
+.logo {
+  max-width: 120px;
+  margin: auto;
+  display: block;
+
+  svg {
+    width: 100%;
+  }
+}
+
+
+// menu button 
+#mt-trigger {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  height: 32px;
+  width: 34px;
+  background: red;
+  @include btn-reset();
+  cursor: pointer;
+}
+
+.menu-span {
+  height: 2px;
+  position: absolute;
+  background: $green;
+  top: 0;
+  transition: all 300ms ease;
+
+  &-top {
+    transform: translateY(7px);
+    width: 80%;
+    left: 20%;
+  }
+
+  &-mid {
+    transform: translateY(15px);
+    width: 60%;
+    left: 40%;
+  }
+
+  &-btm {
+    transform: translateY(23px);
+    width: 80%;
+    left: 20%;
+  }
+
+}
+
+
+
+
+.nav-parent.is-active  {
+
+  .menu-span {
+
+    &-top{ 
+      width: 60%; 
+      left: 40%;
+      transform: translateY(15px) rotate(45deg);
+    }
+
+    &-mid {
+      width: 0%;
+    }
+
+    &-btm { 
+      width: 60%; 
+      left: 40%;
+      transform: translateY(15px) rotate(-45deg);
+    }
+
+  }
+
+}
+  
+
+
+// Nav 
+nav ul {
+  margin: 0; 
+  padding: 0;
+  padding-top: 1em;
+}
+
+nav li {
+  margin-bottom: 1em;
+}
+
+nav a {
+  color: white;
+}
+
+
