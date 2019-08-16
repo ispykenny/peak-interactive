@@ -16,7 +16,7 @@
 
 <main>
 
-<div class="nav-parent">
+<div class="nav-parent mobile">
 	<div class="inner nav-flex">
 		<div class="nav-element">
 			<a href="" class="logo">
@@ -40,6 +40,37 @@
 				</ul>
 			</nav>
 		</div>
+	</div>
+</div>
+
+<div class="nav-parent desktop">
+	<div class="inner">
+		<div class="inner-flex">
+			<div class="nav">
+				<nav>
+					<ul>
+						<li><a href="" class="active">Featured</a></li>
+						<li><a href="">Portfolio</a></li>
+						<li><a href="">Team</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="logo-dk">
+				<a href="" class="logo">
+					<?php get_template_part('partials/logo'); ?>
+				</a>
+			</div>
+			<div class="nav">
+				<nav>
+					<ul>
+						<li><a href="">Services</a></li>
+						<li><a href="">Blog</a></li>
+						<li><a href="">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
 	</div>
 </div>
 

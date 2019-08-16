@@ -70,11 +70,18 @@
 "use strict";
 
 
+var _selectors = __webpack_require__(3);
+
+var _selectors2 = _interopRequireDefault(_selectors);
+
 var _nav = __webpack_require__(1);
 
 var _nav2 = _interopRequireDefault(_nav);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// handle nav
+_selectors2.default.$navBtn.on('click', _nav2.default);
 
 /***/ }),
 /* 1 */
@@ -82,6 +89,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 "use strict";
 
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
 var _jquery = __webpack_require__(2);
 
@@ -93,9 +104,19 @@ var _selectors2 = _interopRequireDefault(_selectors);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var wee = function wee() {
-  return console.log('here', _jquery2.default);
+var toggleNav = function toggleNav() {
+  if (_selectors2.default.navShowing != true) {
+    _selectors2.default.$navEl.slideDown(200);
+    _selectors2.default.$navParent.addClass('is-active');
+    _selectors2.default.navShowing = true;
+  } else {
+    _selectors2.default.$navEl.slideUp(10);
+    _selectors2.default.$navParent.removeClass('is-active');
+    _selectors2.default.navShowing = false;
+  }
 };
+
+exports.default = toggleNav;
 
 /***/ }),
 /* 2 */
@@ -10722,7 +10743,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var $s = {
   $navParent: (0, _jquery2.default)('.nav-parent'),
   $navEl: (0, _jquery2.default)('nav'),
-  $navBtn: (0, _jquery2.default)('#mt-trigger')
+  $navBtn: (0, _jquery2.default)('#mt-trigger'),
+  navShowing: false
 };
 
 exports.default = $s;
