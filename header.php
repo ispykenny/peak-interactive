@@ -49,7 +49,7 @@
 			<div class="nav">
 				<nav>
 					<ul>
-						<li><a href="" class="active">Featured</a></li>
+						<li><a href="" class="active">Home</a></li>
 						<li><a href="">Portfolio</a></li>
 						<li><a href="">Team</a></li>
 					</ul>
@@ -70,7 +70,22 @@
 				</nav>
 			</div>
 		</div>
-
 	</div>
 </div>
+
+
+<header>
+	<div class="inner">
+		<div class="content-area hdr-content">
+			<h1>Welcome to Peak Interative</h1>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente facilis magni ipsam. Numquam, tempore. Est.</p>
+			<a href="" class="cta">
+				<span>Learn More</span>
+				<span class="cta-bg"></span>
+				<span class="cta-border"></span>
+			</a>
+		</div>
+	</div>
+	<div class="bg-el" style="background-image: url(<?php echo "$root/dist/assets/images/header.jpg"; ?>);"></div>
+</header>
 

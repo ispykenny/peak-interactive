@@ -1,3 +1,13 @@
+body { height: 5000px; }
+.nav-parent {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  transition: background .3s ease;
+}
+
 .nav-element {
   position: relative;
 
@@ -62,6 +72,7 @@
 
 
 .nav-parent.is-active  {
+  background: rgba(black, 1);
 
   .menu-span {
 
@@ -113,6 +124,7 @@ nav li {
   transition: transform 500ms, opacity 500ms ease;
   transform: translateY(-20px);
   opacity: 0;
+  list-style-type: none;
 }
 
 nav a {
@@ -126,6 +138,10 @@ nav a {
 
 
 @media(min-width: $bp-lg) {
+
+  .nav-parent.is-active {
+    background: transparent;
+  }
   
   .mobile {
     display: none;
@@ -138,15 +154,14 @@ nav a {
     display: flex;
     padding: 1.4em 0em;
     justify-content: space-between;
-    border-bottom: 1px solid #343434;
   }
 
   .logo {
-    max-width: 200px;
+    max-width: 130px;
   }
 
   nav {
-    font-size: 1.2em;
+    font-size: 0.8em;
     display: inline-block !important;
   }
   nav ul {
@@ -161,7 +176,7 @@ nav a {
     letter-spacing: 2px;
     opacity: 1;
     transform: translateY(0px);
-    margin-right: 4em;
+    margin-right: 3em;
     &:last-of-type {
       margin-right: 0em;
     }
@@ -171,4 +186,20 @@ nav a {
     }
   }
 
+}
+
+
+@media(min-width: $bp-xl) {
+  .logo {
+    max-width: 200px;
+  }
+
+  nav {
+    font-size: 0.9em;
+    display: inline-block !important;
+  }
+
+  nav li {
+    margin-right: 4em;
+  }
 }

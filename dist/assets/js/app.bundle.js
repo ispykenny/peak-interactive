@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -70,56 +70,27 @@
 "use strict";
 
 
-var _selectors = __webpack_require__(3);
-
-var _selectors2 = _interopRequireDefault(_selectors);
-
-var _nav = __webpack_require__(1);
-
-var _nav2 = _interopRequireDefault(_nav);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// handle nav
-_selectors2.default.$navBtn.on('click', _nav2.default);
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _jquery = __webpack_require__(2);
+var _jquery = __webpack_require__(1);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _selectors = __webpack_require__(3);
-
-var _selectors2 = _interopRequireDefault(_selectors);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var toggleNav = function toggleNav() {
-  if (_selectors2.default.navShowing != true) {
-    _selectors2.default.$navEl.slideDown(200);
-    _selectors2.default.$navParent.addClass('is-active');
-    _selectors2.default.navShowing = true;
-  } else {
-    _selectors2.default.$navEl.slideUp(10);
-    _selectors2.default.$navParent.removeClass('is-active');
-    _selectors2.default.navShowing = false;
-  }
+var $s = {
+  $navParent: (0, _jquery2.default)('.nav-parent'),
+  $navEl: (0, _jquery2.default)('nav'),
+  $navBtn: (0, _jquery2.default)('#mt-trigger'),
+  navShowing: false
 };
 
-exports.default = toggleNav;
+exports.default = $s;
 
 /***/ }),
-/* 2 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10724,6 +10695,32 @@ return jQuery;
 
 
 /***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _selectors = __webpack_require__(0);
+
+var _selectors2 = _interopRequireDefault(_selectors);
+
+var _nav = __webpack_require__(3);
+
+var _nav2 = _interopRequireDefault(_nav);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var we = function we() {
+  return console.log(window.innerWidth);
+};
+
+window.addEventListener('resize', we);
+
+// handle nav
+_selectors2.default.$navBtn.on('click', _nav2.default);
+
+/***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10734,20 +10731,29 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _jquery = __webpack_require__(2);
+var _jquery = __webpack_require__(1);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
+var _selectors = __webpack_require__(0);
+
+var _selectors2 = _interopRequireDefault(_selectors);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var $s = {
-  $navParent: (0, _jquery2.default)('.nav-parent'),
-  $navEl: (0, _jquery2.default)('nav'),
-  $navBtn: (0, _jquery2.default)('#mt-trigger'),
-  navShowing: false
+var toggleNav = function toggleNav() {
+  if (_selectors2.default.navShowing != true) {
+    _selectors2.default.$navEl.slideDown(200);
+    _selectors2.default.$navParent.addClass('is-active');
+    _selectors2.default.navShowing = true;
+  } else {
+    _selectors2.default.$navEl.slideUp(10);
+    _selectors2.default.$navParent.removeClass('is-active');
+    _selectors2.default.navShowing = false;
+  }
 };
 
-exports.default = $s;
+exports.default = toggleNav;
 
 /***/ })
 /******/ ]);
