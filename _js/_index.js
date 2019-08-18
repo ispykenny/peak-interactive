@@ -1,10 +1,12 @@
 
 import $s from './selectors';
 import nav from './nav';
+import buttons from './buttons';
 
-const we = () => console.log(window.innerWidth)
 
-window.addEventListener('resize', we)
+// generate markup for each button
+buttons.generateBtn();
+
 
 // handle nav
 $s.$navBtn.on('click', nav);

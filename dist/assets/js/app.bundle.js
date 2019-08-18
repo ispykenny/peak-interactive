@@ -84,6 +84,7 @@ var $s = {
   $navParent: (0, _jquery2.default)('.nav-parent'),
   $navEl: (0, _jquery2.default)('nav'),
   $navBtn: (0, _jquery2.default)('#mt-trigger'),
+  $cta: (0, _jquery2.default)('.cta'),
   navShowing: false
 };
 
@@ -10709,13 +10710,14 @@ var _nav = __webpack_require__(3);
 
 var _nav2 = _interopRequireDefault(_nav);
 
+var _buttons = __webpack_require__(4);
+
+var _buttons2 = _interopRequireDefault(_buttons);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var we = function we() {
-  return console.log(window.innerWidth);
-};
-
-window.addEventListener('resize', we);
+// generate markup for each button
+_buttons2.default.generateBtn();
 
 // handle nav
 _selectors2.default.$navBtn.on('click', _nav2.default);
@@ -10754,6 +10756,36 @@ var toggleNav = function toggleNav() {
 };
 
 exports.default = toggleNav;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jquery = __webpack_require__(1);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _selectors = __webpack_require__(0);
+
+var _selectors2 = _interopRequireDefault(_selectors);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var generateBtn = function generateBtn() {
+  _selectors2.default.$cta.each(function (index, element) {
+    var text = (0, _jquery2.default)(element).text();
+    (0, _jquery2.default)(element).html('\n      <span>' + text + '</span>\n      <span class="cta-bg"></span>\n      <span class="cta-border"></span>\n    ');
+  });
+};
+
+exports.default = { generateBtn: generateBtn };
 
 /***/ })
 /******/ ]);

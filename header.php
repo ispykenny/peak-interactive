@@ -33,10 +33,11 @@
 			<nav>
 				<ul>
 					<li><a href="">Home</a></li>
-					<li><a href="">Services offered</a></li>
-					<li><a href="">Blog area</a></li>
-					<li><a href="">About us</a></li>
-					<li><a href="">Contact us</a></li>
+					<li><a href="">Portfolio</a></li>
+					<li><a href="">Team</a></li>
+					<li><a href="">Services</a></li>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -80,9 +81,7 @@
 			<h1>Welcome to Peak Interative</h1>
 			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente facilis magni ipsam. Numquam, tempore. Est.</p>
 			<a href="" class="cta">
-				<span>Learn More</span>
-				<span class="cta-bg"></span>
-				<span class="cta-border"></span>
+				Learn More
 			</a>
 		</div>
 	</div>

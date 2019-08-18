@@ -4,6 +4,7 @@ const $s = {
   $navParent: $('.nav-parent'),
   $navEl: $('nav'),
   $navBtn : $('#mt-trigger'),
+  $cta: $('.cta'),
   navShowing: false
 }
 

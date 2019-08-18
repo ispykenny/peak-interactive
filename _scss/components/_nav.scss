@@ -13,7 +13,7 @@ body { height: 5000px; }
 
   &:first-of-type {
     padding: 1em 0em;
-    border-bottom: 1px solid #343434;
+    border-bottom: 1px solid rgba(white, 0.3);
   }
 }
 
@@ -116,15 +116,18 @@ nav {
 nav ul {
   margin: 0; 
   padding: 0;
-  padding-top: 1em;
+  padding: 2em 0em;
 }
 
 nav li {
-  margin-bottom: 1em;
-  transition: transform 500ms, opacity 500ms ease;
-  transform: translateY(-20px);
+  margin-bottom: 1.4em;
+  transition: transform 800ms, opacity 800ms ease;
+  transform: translateY(20px);
   opacity: 0;
   list-style-type: none;
+  &:last-of-type {
+    margin-bottom: 0em;
+  }
 }
 
 nav a {
