@@ -1,12 +1,17 @@
-import $ from 'jquery';
+import $ from "jquery";
 
 const $s = {
-  $navParent: $('.nav-parent'),
-  $navEl: $('nav'),
-  $navBtn : $('#mt-trigger'),
-  $cta: $('.cta'),
+  $body: $("body"),
+  $navParent: $(".nav-parent"),
+  $navEl: $("nav"),
+  $navBtn: $("#mt-trigger"),
+  $cta: $(".cta"),
+  $window: $(window),
+  $navMaster: $(".nav-master"),
+  $headerEl: $(".hdr-el"),
+  $headerBg: $(".hdr-bg"),
+  didScroll: false,
   navShowing: false
-}
-
+};
 
 export default $s;

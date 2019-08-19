@@ -1,11 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900');
-
-$fontMain : 'Lato', sans-serif;
-
 body {
   background: #fff;
-  font-family: $fontMain;
   margin: 0;
+  @include font-smoothing();
 }
 
 .inner {
@@ -23,7 +19,6 @@ body {
 
 
 main {
-  max-width: 1920px;
   margin: auto;
   position: relative;
 }

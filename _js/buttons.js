@@ -6,7 +6,7 @@ const generateBtn = () => {
   $s.$cta.each((index, element) => {
     let text = $(element).text();
     $(element).html(`
-      <span>${text}</span>
+      <span class="cta-text">${text}</span>
       <span class="cta-bg"></span>
       <span class="cta-border"></span>
     `)

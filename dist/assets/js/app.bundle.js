@@ -81,10 +81,16 @@ var _jquery2 = _interopRequireDefault(_jquery);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var $s = {
-  $navParent: (0, _jquery2.default)('.nav-parent'),
-  $navEl: (0, _jquery2.default)('nav'),
-  $navBtn: (0, _jquery2.default)('#mt-trigger'),
-  $cta: (0, _jquery2.default)('.cta'),
+  $body: (0, _jquery2.default)("body"),
+  $navParent: (0, _jquery2.default)(".nav-parent"),
+  $navEl: (0, _jquery2.default)("nav"),
+  $navBtn: (0, _jquery2.default)("#mt-trigger"),
+  $cta: (0, _jquery2.default)(".cta"),
+  $window: (0, _jquery2.default)(window),
+  $navMaster: (0, _jquery2.default)(".nav-master"),
+  $headerEl: (0, _jquery2.default)(".hdr-el"),
+  $headerBg: (0, _jquery2.default)(".hdr-bg"),
+  didScroll: false,
   navShowing: false
 };
 
@@ -10714,6 +10720,10 @@ var _buttons = __webpack_require__(4);
 
 var _buttons2 = _interopRequireDefault(_buttons);
 
+var _scroll = __webpack_require__(5);
+
+var _scroll2 = _interopRequireDefault(_scroll);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // generate markup for each button
@@ -10721,6 +10731,12 @@ _buttons2.default.generateBtn();
 
 // handle nav
 _selectors2.default.$navBtn.on('click', _nav2.default);
+
+_selectors2.default.$window.on('scroll', _scroll2.default.updateScroller);
+requestAnimationFrame(_scroll2.default.scrollTicker);
+_selectors2.default.$window.on('load', function () {
+  return _selectors2.default.$body.addClass('loaded');
+});
 
 /***/ }),
 /* 3 */
@@ -10781,11 +10797,52 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var generateBtn = function generateBtn() {
   _selectors2.default.$cta.each(function (index, element) {
     var text = (0, _jquery2.default)(element).text();
-    (0, _jquery2.default)(element).html('\n      <span>' + text + '</span>\n      <span class="cta-bg"></span>\n      <span class="cta-border"></span>\n    ');
+    (0, _jquery2.default)(element).html('\n      <span class="cta-text">' + text + '</span>\n      <span class="cta-bg"></span>\n      <span class="cta-border"></span>\n    ');
   });
 };
 
 exports.default = { generateBtn: generateBtn };
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _selectors = __webpack_require__(0);
+
+var _selectors2 = _interopRequireDefault(_selectors);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var updateScroller = function updateScroller() {
+  _selectors2.default.didScroll = true;
+};
+
+var scrollTicker = function scrollTicker() {
+  if (_selectors2.default.didScroll) {
+
+    // nav styles
+    if (_selectors2.default.$window.scrollTop() >= 5) {
+      _selectors2.default.$navMaster.addClass('is-scrolled');
+    } else {
+      _selectors2.default.$navMaster.removeClass('is-scrolled');
+    }
+
+    // header background image paralax 
+    _selectors2.default.$headerBg.css({ 'transform': 'translateY(' + _selectors2.default.$window.scrollTop() / 40 + '%)' });
+
+    _selectors2.default.didScroll = false;
+  }
+  requestAnimationFrame(scrollTicker);
+};
+
+exports.default = { updateScroller: updateScroller, scrollTicker: scrollTicker };
 
 /***/ })
 /******/ ]);
