@@ -27,7 +27,17 @@ body {
 
   &:first-of-type {
     padding: 1em 0em;
-    border-bottom: 1px solid rgba(white, 0.3);
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0; 
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 1px; 
+      transition: all 300ms ease;
+      background: rgba(white, 0.3);
+    }
   }
 }
 
@@ -106,6 +116,16 @@ body {
       transform: translateY(15px) rotate(-45deg);
     }
 
+  }
+
+  .nav-element {
+    &:first-of-type {
+
+      &:after {
+        width: 100%;
+        transition: all 900ms ease;
+      }
+    }
   }
 
   @for $i from 0 through 10 {
@@ -213,13 +233,16 @@ nav a {
       height: 1px;
       width: 0%;
       background: $green;
-      bottom: -4px; 
-      left: auto; right: 0;
+      bottom: -4px;
+      left: auto;
+      right: 0;
       transition: width 200ms ease;
     }
+
     a:hover {
       &:after {
-        right: auto; left: 0;
+        right: auto;
+        left: 0;
         width: 100%;
       }
     }

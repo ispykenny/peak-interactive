@@ -84,7 +84,7 @@
 				<h1>We Are Peak Interactive</h1>
 			</div>
 			<div class="hdr-el">
-				<p>Web Design * Digital Branding * Marketing</p>
+				<p>Web Design <span class="dot-spacers"></span> Digital Branding <span class="dot-spacers"></span> Marketing</p>
 			</div>
 			<div class="hdr-el">
 				<a href="" class="cta">
