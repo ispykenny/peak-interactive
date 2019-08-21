@@ -90,6 +90,8 @@ var $s = {
   $navMaster: (0, _jquery2.default)(".nav-master"),
   $headerEl: (0, _jquery2.default)(".hdr-el"),
   $headerBg: (0, _jquery2.default)(".hdr-bg"),
+  $footer: (0, _jquery2.default)('footer'),
+  $main: (0, _jquery2.default)('.main'),
   didScroll: false,
   navShowing: false
 };
@@ -10720,9 +10722,13 @@ var _buttons = __webpack_require__(4);
 
 var _buttons2 = _interopRequireDefault(_buttons);
 
-var _scroll = __webpack_require__(5);
+var _scroll2 = __webpack_require__(5);
 
-var _scroll2 = _interopRequireDefault(_scroll);
+var _scroll3 = _interopRequireDefault(_scroll2);
+
+var _footer = __webpack_require__(6);
+
+var _footer2 = _interopRequireDefault(_footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10732,10 +10738,19 @@ _buttons2.default.generateBtn();
 // handle nav
 _selectors2.default.$navBtn.on('click', _nav2.default);
 
-_selectors2.default.$window.on('scroll', _scroll2.default.updateScroller);
-requestAnimationFrame(_scroll2.default.scrollTicker);
-_selectors2.default.$window.on('load', function () {
-  return _selectors2.default.$body.addClass('loaded');
+requestAnimationFrame(_scroll3.default.scrollTicker);
+
+_selectors2.default.$window.on({
+  'load': function load() {
+    _selectors2.default.$body.addClass('loaded');
+    _footer2.default.addFooterMargin();
+  },
+  'scroll': function scroll() {
+    _scroll3.default.updateScroller();
+  },
+  'resize': function resize() {
+    _footer2.default.resizeFooterMargin();
+  }
 });
 
 /***/ }),
@@ -10843,6 +10858,73 @@ var scrollTicker = function scrollTicker() {
 };
 
 exports.default = { updateScroller: updateScroller, scrollTicker: scrollTicker };
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _selectors = __webpack_require__(0);
+
+var _selectors2 = _interopRequireDefault(_selectors);
+
+var _debounce = __webpack_require__(7);
+
+var _debounce2 = _interopRequireDefault(_debounce);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var resizeFooterMargin = function resizeFooterMargin() {
+  var resizer = (0, _debounce2.default)(function () {
+    _selectors2.default.$main.css({
+      'margin-bottom': _selectors2.default.$footer.outerHeight() + 'px'
+    });
+  }, 500);
+  resizer();
+};
+
+var addFooterMargin = function addFooterMargin() {
+  _selectors2.default.$main.css({
+    'margin-bottom': _selectors2.default.$footer.outerHeight() + 'px'
+  });
+};
+
+exports.default = { resizeFooterMargin: resizeFooterMargin, addFooterMargin: addFooterMargin };
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _arguments = arguments;
+var debounce = function debounce(func, wait, immediate) {
+  var timeout = void 0;
+  return function () {
+    var context = undefined,
+        args = _arguments;
+    var later = function later() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
+
+exports.default = debounce;
 
 /***/ })
 /******/ ]);

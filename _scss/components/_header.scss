@@ -4,7 +4,7 @@ header {
 }
 
 .hdr-content {
-  padding: 10em 0em 8em 0em;
+  padding: 7em 0em 6em 0em;
   color: white;
   text-align: center;
   max-width: 1000px;
@@ -18,7 +18,7 @@ header {
   }
 
   @media(min-width: $bp-md) {
-    padding: 13em 0em 11em 0em;
+    padding: 8em 0em 8em 0em;
 
     h1 {
       font-size: 2.4em;
@@ -27,7 +27,7 @@ header {
   }
 
   @media(min-width: $bp-lg) {
-    padding: 16em 0em 14em 0em;
+    padding: 12em 0em 10em 0em;
 
     h1 {
       font-size: 2.8em;

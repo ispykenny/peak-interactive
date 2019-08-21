@@ -10,6 +10,8 @@ const $s = {
   $navMaster: $(".nav-master"),
   $headerEl: $(".hdr-el"),
   $headerBg: $(".hdr-bg"),
+  $footer: $('footer'),
+  $main: $('.main'),
   didScroll: false,
   navShowing: false
 };

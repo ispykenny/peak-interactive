@@ -1,0 +1,27 @@
+.main {
+  padding: 2em 0em;
+  position: relative;
+  z-index: 99;
+  background: white;
+}
+
+.section-hdr {
+  font-size: 1.6em;
+}
+
+.main-block {
+  padding: 6em 0em 2em 0em;
+}
+
+.default-block {
+  padding: 4em 0em;
+}
+
+.content-area {
+  .section-hdr {
+    margin-top: 0em;
+  }
+  p:last-of-type {
+    margin-bottom: 0em;
+  }
+}
