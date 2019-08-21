@@ -8,7 +8,10 @@ p {
   font-size: 1.2em;
 }
 
-html {
+section p, footer p {
+  font-size: 0.96em;
+}
+body {
   font-size: 17px;
   font-family: 'Oswald', sans-serif;
 
