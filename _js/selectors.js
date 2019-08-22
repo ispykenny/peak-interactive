@@ -13,7 +13,7 @@ const $s = {
   $footer: $('footer'),
   $main: $('.main'),
   $lazyBg: $('.lazy-bg'),
-  $lazyImg: $('.lazy-image'),
+  $lazyImg: $('.lazy-img'),
   didScroll: false,
   navShowing: false
 };
