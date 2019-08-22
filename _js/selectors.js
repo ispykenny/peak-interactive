@@ -2,7 +2,9 @@ import $ from "jquery";
 
 const $g = {
   $body: $('body'),
-  $nav: $('nav')
+  $nav: $('nav'),
+  didScroll: false,
+  navShowing: false
 };
 
 const $s = {
