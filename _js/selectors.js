@@ -1,5 +1,7 @@
 import $ from "jquery";
 
+const $global = {};
+
 const $s = {
   $body: $("body"),
   $navParent: $(".nav-parent"),
