@@ -12,6 +12,8 @@ const $s = {
   $headerBg: $(".hdr-bg"),
   $footer: $('footer'),
   $main: $('.main'),
+  $lazyBg: $('.lazy-bg'),
+  $lazyImg: $('.lazy-image'),
   didScroll: false,
   navShowing: false
 };

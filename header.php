@@ -93,6 +93,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="bg-el hdr-bg" style="background-image: url(<?php echo "$root/dist/assets/images/header.jpg"; ?>);"></div>
+	<div class="bg-el hdr-bg lazy-bg" data-bg="<?php echo "$root/dist/assets/images/header.jpg"; ?>"></div>
 </header>
 
