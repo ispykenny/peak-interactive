@@ -1,6 +1,7 @@
 header {
   position: relative;
   overflow: hidden;
+  z-index: 3;
 }
 
 .hdr-content {
@@ -28,7 +29,7 @@ header {
 
   @media(min-width: $bp-lg) {
     padding: 12em 0em 10em 0em;
-
+yarn
     h1 {
       font-size: 2.8em;
     }
