@@ -82,7 +82,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var $g = {
   $body: (0, _jquery2.default)('body'),
-  $nav: (0, _jquery2.default)('nav')
+  $nav: (0, _jquery2.default)('nav'),
+  didScroll: false,
+  navShowing: false
 };
 
 var $s = {
