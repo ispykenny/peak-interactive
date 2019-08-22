@@ -80,7 +80,7 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var $global = {
+var $g = {
   $body: (0, _jquery2.default)('body'),
   $nav: (0, _jquery2.default)('nav')
 };

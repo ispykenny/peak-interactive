@@ -1,6 +1,6 @@
 import $ from "jquery";
 
-const $global = {
+const $g = {
   $body: $('body'),
   $nav: $('nav')
 };
