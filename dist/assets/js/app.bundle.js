@@ -85,6 +85,7 @@ var $g = {
   $nav: (0, _jquery2.default)('nav'),
   didScroll: false,
   navShowing: false
+
 };
 
 var $s = {

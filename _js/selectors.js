@@ -5,6 +5,7 @@ const $g = {
   $nav: $('nav'),
   didScroll: false,
   navShowing: false
+  
 };
 
 const $s = {
