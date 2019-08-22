@@ -13,9 +13,7 @@ buttons.generateBtn();
 // handle nav
 $s.$navBtn.on('click', nav);
 
-
-
-
+// run scroll ticker 
 requestAnimationFrame(scroll.scrollTicker);
 
 $s.$window.on({
