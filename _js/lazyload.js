@@ -9,13 +9,21 @@ const lazyBg = () => {
       $(element).css({
         'background-image': 'url('+ newImg.src +')'
       })
-      console.log('image loaded')
     })
   })
 }
 
 const lazyImg = () => {
-  console.log('lazy-images')
+  $s.$lazyImg.each((index, element) => {
+    let $this = $(element);
+    let src = $this.attr('data-src');
+    let mkImg = new Image();
+    mkImg.src = src;
+
+    $(mkImg).on('load', () => {
+      $this.attr('src', src);
+    })
+  })
 }
 
 
