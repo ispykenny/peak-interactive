@@ -11,6 +11,15 @@ footer {
     padding-bottom: 1em;
   }
 
+  a {
+    transition: color 300ms ease;
+
+    &:hover {
+      color: $green;
+    }
+
+  }
+
 }
 
 .footer-hr {
@@ -83,9 +92,9 @@ footer ul {
 }
 
 @media(min-width: $bp-lg) {
-  footer {
-    position: fixed;
-  }
+  // footer {
+  //   position: fixed;
+  // }
 
   .footer-hr {
     display: none;
@@ -98,12 +107,15 @@ footer ul {
     border-bottom: 1px solid rgba(white, 0.4);
     padding: 1.4em 0em;
   }
+
   .footer-el:nth-child(2) {
     order: 0;
   }
+
   .footer-el:nth-child(3) {
     order: 2;
   }
+
   footer ul li {
     font-size: 22px;
   }
@@ -115,6 +127,7 @@ footer ul {
   
     li {
       flex-basis: auto;
+      margin-bottom: 0.5em;
     }
   
   }
@@ -130,10 +143,6 @@ footer ul {
     ul {
       display: flex;
       justify-content: space-around;
-
-      li {
-
-      }
     }
   }
   

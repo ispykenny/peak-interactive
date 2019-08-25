@@ -19,7 +19,7 @@ requestAnimationFrame(scroll.scrollTicker);
 $s.$window.on({
   'load': () => {
     $s.$body.addClass('loaded');
-    footer.addFooterMargin();
+    // footer.addFooterMargin();
     lazyload.lazyBg();
     lazyload.lazyImg();
   },
@@ -27,6 +27,6 @@ $s.$window.on({
     scroll.updateScroller();
   },
   'resize': () => {
-    footer.resizeFooterMargin();
+    // footer.resizeFooterMargin();
   }
 })

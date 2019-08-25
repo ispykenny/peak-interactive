@@ -10758,7 +10758,7 @@ requestAnimationFrame(_scroll3.default.scrollTicker);
 _selectors2.default.$window.on({
   'load': function load() {
     _selectors2.default.$body.addClass('loaded');
-    _footer2.default.addFooterMargin();
+    // footer.addFooterMargin();
     _lazyload2.default.lazyBg();
     _lazyload2.default.lazyImg();
   },
@@ -10766,7 +10766,7 @@ _selectors2.default.$window.on({
     _scroll3.default.updateScroller();
   },
   'resize': function resize() {
-    _footer2.default.resizeFooterMargin();
+    // footer.resizeFooterMargin();
   }
 });
 
