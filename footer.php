@@ -6,7 +6,7 @@
 
 
 <footer>
-	<div class="inner default-block">
+	<div class="inner">
 		<div class="inner__inner flexing-footer">
 
 			<div class="footer-bio footer-el">
