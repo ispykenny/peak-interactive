@@ -8,7 +8,7 @@ footer {
   text-align: center;
 
   > .inner {
-    padding: 2em;
+    padding: 2em 0em;
   }
 
   a {
@@ -92,7 +92,7 @@ footer ul {
 
   footer {
     > .inner {
-      padding: 2em;
+      padding: 2em 0em;
     }
   }
 
@@ -138,6 +138,7 @@ footer ul {
 
     nav {
       max-width: 1000px;
+      width: 100%;
       margin: auto; 
 
     }
