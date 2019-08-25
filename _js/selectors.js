@@ -11,7 +11,7 @@ const $g = {
 const $s = {
   $body: $("body"),
   $navParent: $(".nav-parent"),
-  $navEl: $("nav"),
+  $navEl: $(".nav-master nav"),
   $navBtn: $("#mt-trigger"),
   $cta: $(".cta"),
   $window: $(window),

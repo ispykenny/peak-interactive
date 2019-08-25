@@ -91,7 +91,7 @@ var $g = {
 var $s = {
   $body: (0, _jquery2.default)("body"),
   $navParent: (0, _jquery2.default)(".nav-parent"),
-  $navEl: (0, _jquery2.default)("nav"),
+  $navEl: (0, _jquery2.default)(".nav-master nav"),
   $navBtn: (0, _jquery2.default)("#mt-trigger"),
   $cta: (0, _jquery2.default)(".cta"),
   $window: (0, _jquery2.default)(window),
@@ -10752,6 +10752,7 @@ _buttons2.default.generateBtn();
 // handle nav
 _selectors2.default.$navBtn.on('click', _nav2.default);
 
+// run scroll ticker 
 requestAnimationFrame(_scroll3.default.scrollTicker);
 
 _selectors2.default.$window.on({
@@ -10901,14 +10902,22 @@ var resizeFooterMargin = function resizeFooterMargin() {
     _selectors2.default.$main.css({
       'margin-bottom': _selectors2.default.$footer.outerHeight() + 'px'
     });
-  }, 500);
-  resizer();
+  }, 400);
+  if (!_selectors2.default.$navBtn.is(":visible")) {
+    resizer();
+  } else {
+    _selectors2.default.$main.css({
+      'margin-bottom': 0 + 'px'
+    });
+  }
 };
 
 var addFooterMargin = function addFooterMargin() {
-  _selectors2.default.$main.css({
-    'margin-bottom': _selectors2.default.$footer.outerHeight() + 'px'
-  });
+  if (!_selectors2.default.$navBtn.is(":visible")) {
+    _selectors2.default.$main.css({
+      'margin-bottom': _selectors2.default.$footer.outerHeight() + 'px'
+    });
+  }
 };
 
 exports.default = { resizeFooterMargin: resizeFooterMargin, addFooterMargin: addFooterMargin };

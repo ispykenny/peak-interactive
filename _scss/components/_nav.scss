@@ -125,7 +125,7 @@
   }
 
   @for $i from 0 through 10 {
-    nav li {
+    .main-nv li {
       opacity: 1;
       transform: translateY(0px);
 
@@ -139,18 +139,18 @@
 
 
 
-// Nav 
-nav {
+// .main-nv 
+.main-nv {
   display: none;
 }
 
-nav ul {
+.main-nv ul {
   margin: 0;
   padding: 0;
   padding: 2em 0em;
 }
 
-nav li {
+.main-nv li {
   margin-bottom: 1.4em;
   transition: transform 800ms, opacity 800ms ease;
   transform: translateY(20px);
@@ -162,7 +162,7 @@ nav li {
   }
 }
 
-nav a {
+.main-nv a {
   color: white;
   text-decoration: none;
   font-weight: 700;
@@ -198,17 +198,17 @@ nav a {
     max-width: 160px;
   }
 
-  nav {
+  .main-nv {
     font-size: 0.8em;
     display: inline-block !important;
   }
 
-  nav ul {
+  .main-nv ul {
     display: flex;
     margin-top: 0.6em;
   }
 
-  nav li {
+  .main-nv li {
     text-transform: uppercase;
     letter-spacing: 2px;
     opacity: 1;
@@ -269,12 +269,12 @@ nav a {
       max-width: 160px;
     }
 
-    nav {
+    .main-nv {
       font-size: 0.8em;
       display: inline-block !important;
     }
 
-    nav ul {
+    .main-nv ul {
       display: flex;
       margin-top: 0.6em;
     }
@@ -283,7 +283,7 @@ nav a {
       flex-basis: 2;
     }
 
-    nav li {
+    .main-nv li {
       transition: all 400ms ease;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -310,12 +310,12 @@ nav a {
     max-width: 200px;
   }
 
-  nav {
+  .main-nv {
     font-size: 0.9em;
     display: inline-block !important;
   }
 
-  nav li {
+  .main-nv li {
     margin-right: 4em;
     margin-bottom: 0em;
   }

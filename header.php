@@ -31,7 +31,7 @@
 				</button>
 			</div>
 			<div class="nav-element">
-				<nav>
+				<nav class="main-nv">
 					<ul>
 						<li><a href="">Home</a></li>
 						<li><a href="">Portfolio</a></li>
@@ -49,7 +49,7 @@
 		<div class="inner">
 			<div class="inner-flex">
 				<div class="nav">
-					<nav>
+					<nav class="main-nv">
 						<ul>
 							<li><a href="" class="active">Home</a></li>
 							<li><a href="">Portfolio</a></li>
@@ -63,7 +63,7 @@
 					</a>
 				</div>
 				<div class="nav">
-					<nav>
+					<nav class="main-nv">
 						<ul>
 							<li><a href="">Services</a></li>
 							<li><a href="">Blog</a></li>

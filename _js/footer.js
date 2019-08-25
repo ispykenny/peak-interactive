@@ -6,14 +6,22 @@ const resizeFooterMargin = () => {
     $s.$main.css({
       'margin-bottom': $s.$footer.outerHeight() + 'px'
     })
-  }, 500)
-  resizer();
+  }, 400)
+  if(!$s.$navBtn.is(":visible")) {
+    resizer();
+  } else {
+    $s.$main.css({
+      'margin-bottom': 0 + 'px'
+    })
+  }
 }
 
 const addFooterMargin = () => {
-  $s.$main.css({
-    'margin-bottom': $s.$footer.outerHeight() + 'px'
-  })
+  if(!$s.$navBtn.is(":visible")) {
+    $s.$main.css({
+      'margin-bottom': $s.$footer.outerHeight() + 'px'
+    })
+  }
 }
 
 export default { resizeFooterMargin, addFooterMargin };
