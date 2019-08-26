@@ -59,6 +59,7 @@ footer ul {
 
   li {
     font-size: 20px;
+    text-transform: uppercase;
     margin-bottom: 1em;
 
     &:last-of-type {
@@ -67,6 +68,14 @@ footer ul {
 
   }
 }
+
+
+footer nav {
+  max-width: 800px;
+  margin: auto;
+}
+
+
 
 .contact-info span {
   color: $green;
@@ -137,7 +146,7 @@ footer ul {
     // padding-bottom: 1em;
 
     nav {
-      max-width: 1000px;
+      max-width: 600px;
       width: 100%;
       margin: auto; 
 
