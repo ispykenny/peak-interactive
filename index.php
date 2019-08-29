@@ -3,6 +3,28 @@
 	$root = get_template_directory_uri();
 ?>
 
+
+
+
+<header>
+	<div class="inner">
+		<div class="content-area hdr-content">
+			<div class="hdr-el">
+				<h1>We Are Peak Interactive</h1>
+			</div>
+			<div class="hdr-el">
+				<p>Web Design <span class="dot-spacers"></span> Digital Branding <span class="dot-spacers"></span> Marketing</p>
+			</div>
+			<div class="hdr-el">
+				<a href="" class="cta">
+					Learn More
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="bg-el hdr-bg lazy-bg" data-bg="<?php echo "$root/dist/assets/images/header.jpg"; ?>"></div>
+</header>
+
 <div class="main">
 	<section class="default-block">
 		<div class="inner">

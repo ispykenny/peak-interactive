@@ -10,9 +10,11 @@ const $g = {
 
 const $s = {
   $body: $("body"),
+  $nav: $('nav'),
   $navParent: $(".nav-parent"),
   $navEl: $(".nav-master nav"),
   $navBtn: $("#mt-trigger"),
+  $spacer: $('.spacer'),
   $cta: $(".cta"),
   $window: $(window),
   $navMaster: $(".nav-master"),

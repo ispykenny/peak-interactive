@@ -90,9 +90,11 @@ var $g = {
 
 var $s = {
   $body: (0, _jquery2.default)("body"),
+  $nav: (0, _jquery2.default)('nav'),
   $navParent: (0, _jquery2.default)(".nav-parent"),
   $navEl: (0, _jquery2.default)(".nav-master nav"),
   $navBtn: (0, _jquery2.default)("#mt-trigger"),
+  $spacer: (0, _jquery2.default)('.spacer'),
   $cta: (0, _jquery2.default)(".cta"),
   $window: (0, _jquery2.default)(window),
   $navMaster: (0, _jquery2.default)(".nav-master"),
@@ -10744,6 +10746,10 @@ var _lazyload = __webpack_require__(8);
 
 var _lazyload2 = _interopRequireDefault(_lazyload);
 
+var _util = __webpack_require__(9);
+
+var _util2 = _interopRequireDefault(_util);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // generate markup for each button
@@ -10758,15 +10764,15 @@ requestAnimationFrame(_scroll3.default.scrollTicker);
 _selectors2.default.$window.on({
   'load': function load() {
     _selectors2.default.$body.addClass('loaded');
-    // footer.addFooterMargin();
     _lazyload2.default.lazyBg();
     _lazyload2.default.lazyImg();
+    _util2.default.setSpacerHeight();
   },
   'scroll': function scroll() {
     _scroll3.default.updateScroller();
   },
   'resize': function resize() {
-    // footer.resizeFooterMargin();
+    _util2.default.updateSpacer();
   }
 });
 
@@ -10998,6 +11004,46 @@ var lazyImg = function lazyImg() {
 };
 
 exports.default = { lazyBg: lazyBg, lazyImg: lazyImg };
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _selectors = __webpack_require__(0);
+
+var _selectors2 = _interopRequireDefault(_selectors);
+
+var _debounce = __webpack_require__(7);
+
+var _debounce2 = _interopRequireDefault(_debounce);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var setSpacerHeight = function setSpacerHeight() {
+  if (!_selectors2.default.$spacer.is(":visible")) return;
+  _selectors2.default.$spacer.css({
+    'padding-top': _selectors2.default.$navMaster.outerHeight()
+  });
+};
+
+var updateSpacer = function updateSpacer() {
+  if (!_selectors2.default.$spacer.is(":visible")) return;
+  var setSpacer = (0, _debounce2.default)(function () {
+    _selectors2.default.$spacer.css({
+      'padding-top': _selectors2.default.$navMaster.outerHeight()
+    });
+  }, 400);
+  setSpacer();
+};
+
+exports.default = { setSpacerHeight: setSpacerHeight, updateSpacer: updateSpacer };
 
 /***/ })
 /******/ ]);

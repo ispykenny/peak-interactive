@@ -5,6 +5,7 @@ import buttons from './buttons';
 import scroll from './scroll';
 import footer from './footer';
 import lazyload from './lazyload';
+import util from './util';
 
 // generate markup for each button
 buttons.generateBtn();
@@ -19,14 +20,14 @@ requestAnimationFrame(scroll.scrollTicker);
 $s.$window.on({
   'load': () => {
     $s.$body.addClass('loaded');
-    // footer.addFooterMargin();
     lazyload.lazyBg();
     lazyload.lazyImg();
+    util.setSpacerHeight();
   },
   'scroll': () => {
     scroll.updateScroller();
   },
   'resize': () => {
-    // footer.resizeFooterMargin();
+    util.updateSpacer();
   }
 })
