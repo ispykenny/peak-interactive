@@ -15,30 +15,36 @@
 }
 
 .blog-blurb {
+
   h4 {
     margin-bottom: 0em;
     color: $green;
     padding-bottom: 0.5em;
     font-size: 1.45em;
   }
+
   a {
     color: $green;
     text-decoration: none;
     display: flex;
     align-items: center;
   }
+
   small, p {
     color: white;
   }
+
   p {
     margin-bottom: 0em;
   }
+
   svg {
     margin-left: 10px;
     margin-top: 5px;
     width: 12px;
     fill: $green;
   }
+  
 }
 
 
