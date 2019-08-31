@@ -151,7 +151,7 @@
 }
 
 .main-nv li {
-  margin-bottom: 1.4em;
+  // margin-bottom: 1.4em;
   transition: transform 800ms, opacity 800ms ease;
   transform: translateY(20px);
   opacity: 0;
@@ -217,6 +217,10 @@
 
     &:last-of-type {
       margin-right: 0em;
+      margin-bottom: 0em;
+      &:after {
+        margin-bottom: 0em;
+      }
     }
 
     a.active {
@@ -294,6 +298,7 @@
 
       &:last-of-type {
         margin-right: 0em;
+        margin-bottom: 0em;
       }
 
       a.active {

@@ -18,7 +18,10 @@
 
 <?php include 'partials/nav.php' ;?>
 
-<?php var_dump($nav); ?>
+<?php 
+	$count; ?>
+
+
 
 <div class="nav-master">
 	<div class="nav-parent mobile">
@@ -37,12 +40,9 @@
 			<div class="nav-element">
 				<nav class="main-nv">
 					<ul>
-						<li><a href="<?php echo site_url('');?>">Home</a></li>
-						<li><a href="">Portfolio</a></li>
-						<li><a href="">Team</a></li>
-						<li><a href="">Services</a></li>
-						<li><a href="<?php echo site_url('/blog') ; ?>">Blog</a></li>
-						<li><a href="">Contact</a></li>
+					<?php forEach($nav as $theNav) : ?>
+						<li><a href="<?php echo site_url($theNav['link']);?>"><?php echo $theNav['text'];?></a></li>
+					<?php endforeach; ?>
 					</ul>
 				</nav>
 			</div>
@@ -55,9 +55,13 @@
 				<div class="nav">
 					<nav class="main-nv">
 						<ul>
-							<li><a href="<?php echo site_url('');?>" class="active">Home</a></li>
-							<li><a href="">Portfolio</a></li>
-							<li><a href="">Team</a></li>
+							<?php forEach($nav as $theLi) : 
+								$count++;
+								if($count <= 3) :
+							?>
+
+							<li><a href="<?php echo site_url($theLi['link']);?>"><?php echo $theLi['text'];?></a></li>
+								<?php endif; endforeach; $count = -1;?>
 						</ul>
 					</nav>
 				</div>
@@ -69,9 +73,13 @@
 				<div class="nav">
 					<nav class="main-nv">
 						<ul>
-							<li><a href="">Services</a></li>
-							<li><a href="<?php echo site_url('/blog') ; ?>">Blog</a></li>
-							<li><a href="">Contact</a></li>
+							<?php forEach($nav as $theLei) : 
+								$count++;
+								if($count >= 3) :
+							?>
+
+							<li><a href="<?php echo site_url($theLei['link']);?>"><?php echo $theLei['text'];?></a></li>
+								<?php endif; endforeach; ?>
 						</ul>
 					</nav>
 				</div>
