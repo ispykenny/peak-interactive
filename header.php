@@ -18,8 +18,7 @@
 
 <?php include 'partials/nav.php' ;?>
 
-<?php 
-	$count; ?>
+<?php $count; ?>
 
 
 

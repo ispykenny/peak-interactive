@@ -3,7 +3,7 @@
 ?>
 
 </main>
-
+<?php include 'partials/nav.php' ;?>
 
 <footer>
 	<div class="inner">
@@ -26,12 +26,9 @@
 				<hr class="footer-hr">
 				<nav>
 					<ul class="main-footer-nav">
-						<li><a href="">Home</a></li>
-						<li><a href="">Portfolio</a></li>
-						<li><a href="">Team</a></li>
-						<li><a href="">Services</a></li>
-						<li><a href="">Blog</a></li>
-						<li><a href="">Contact</a></li>
+					<?php forEach($nav as $theNav) : ?>
+						<li><a href="<?php echo site_url($theNav['link']);?>"><?php echo $theNav['text'];?></a></li>
+					<?php endforeach; ?>
 					</ul>
 				</nav>
 			</div>
