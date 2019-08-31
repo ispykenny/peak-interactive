@@ -16,6 +16,10 @@
 
 <main>
 
+<?php include 'partials/nav.php' ;?>
+
+<?php var_dump($nav); ?>
+
 <div class="nav-master">
 	<div class="nav-parent mobile">
 		<div class="inner nav-flex">

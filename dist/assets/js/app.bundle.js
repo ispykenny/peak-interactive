@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10722,23 +10722,52 @@ return jQuery;
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _arguments = arguments;
+var debounce = function debounce(func, wait, immediate) {
+  var timeout = void 0;
+  return function () {
+    var context = undefined,
+        args = _arguments;
+    var later = function later() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
+
+exports.default = debounce;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 var _selectors = __webpack_require__(0);
 
 var _selectors2 = _interopRequireDefault(_selectors);
 
-var _nav = __webpack_require__(3);
+var _nav = __webpack_require__(4);
 
 var _nav2 = _interopRequireDefault(_nav);
 
-var _buttons = __webpack_require__(4);
+var _buttons = __webpack_require__(5);
 
 var _buttons2 = _interopRequireDefault(_buttons);
 
-var _scroll2 = __webpack_require__(5);
+var _scroll2 = __webpack_require__(6);
 
 var _scroll3 = _interopRequireDefault(_scroll2);
 
-var _footer = __webpack_require__(6);
+var _footer = __webpack_require__(7);
 
 var _footer2 = _interopRequireDefault(_footer);
 
@@ -10777,7 +10806,7 @@ _selectors2.default.$window.on({
 });
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10812,7 +10841,7 @@ var toggleNav = function toggleNav() {
 exports.default = toggleNav;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10842,7 +10871,7 @@ var generateBtn = function generateBtn() {
 exports.default = { generateBtn: generateBtn };
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10883,7 +10912,7 @@ var scrollTicker = function scrollTicker() {
 exports.default = { updateScroller: updateScroller, scrollTicker: scrollTicker };
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10897,7 +10926,7 @@ var _selectors = __webpack_require__(0);
 
 var _selectors2 = _interopRequireDefault(_selectors);
 
-var _debounce = __webpack_require__(7);
+var _debounce = __webpack_require__(2);
 
 var _debounce2 = _interopRequireDefault(_debounce);
 
@@ -10927,35 +10956,6 @@ var addFooterMargin = function addFooterMargin() {
 };
 
 exports.default = { resizeFooterMargin: resizeFooterMargin, addFooterMargin: addFooterMargin };
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var _arguments = arguments;
-var debounce = function debounce(func, wait, immediate) {
-  var timeout = void 0;
-  return function () {
-    var context = undefined,
-        args = _arguments;
-    var later = function later() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-};
-
-exports.default = debounce;
 
 /***/ }),
 /* 8 */
@@ -11020,7 +11020,7 @@ var _selectors = __webpack_require__(0);
 
 var _selectors2 = _interopRequireDefault(_selectors);
 
-var _debounce = __webpack_require__(7);
+var _debounce = __webpack_require__(2);
 
 var _debounce2 = _interopRequireDefault(_debounce);
 
