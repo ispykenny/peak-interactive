@@ -8,7 +8,11 @@
 		<div class="content-area hdr-content">
 			<div class="hdr-el">
         <div class="green">
-          <h2>Blog</h2>
+          <?php 
+           $category = get_category( get_query_var( 'cat' ) );
+           $cat_id = $category->cat_ID;
+          ?>
+          <h2>You are viewing blogs in <?php echo get_category($cat_id)->name;?></h2>
         </div>
 				<h1>Yeah, we write content too.</h1>
 			</div>
@@ -24,11 +28,8 @@
 <section class="default-block">
   <div class="inner">
     <div class="blog-group">
-      <?php $blog = new WP_Query(array(
-        "post_type" => "post"
-      ));
-
-      if($blog->have_posts()) : while($blog->have_posts()) : $blog->the_post(); ?>
+      <?php 
+      if(have_posts()) : while(have_posts()) : the_post();  ?>
 
       <div class="blog-item">
         <div class="blog-image lazy-bg" data-bg="<?php the_post_thumbnail_url(); ?>">

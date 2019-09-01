@@ -2,6 +2,9 @@ body {
   background: $dark;
   margin: 0;
   @include font-smoothing();
+  &.single-post {
+    background: white;
+  }
 }
 
 .inner {

@@ -1,0 +1,59 @@
+.blog-hdr {
+  h4 {
+    font-size: 2.6em;
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+  }
+}
+
+
+
+.blog-info {
+  font-size: 1.2em;
+  a {
+    color: white;
+    &:hover {
+      color: $green;
+    }
+  }
+  .line {
+    margin: 0px 10px;
+  }
+
+  small {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.general-content {
+  h1 {
+    font-size: 1.5em;
+  }
+  a {
+    color: $green;
+  }
+}
+
+@media(min-width: $bp-md) {
+  .general-content {
+    h1 {
+      font-size: 2em;
+    }
+  }
+}
+
+@media(min-width: $bp-lg) {
+  .flex-layout {
+    display: flex;
+
+    article {
+      flex-basis: 75%;
+      margin-right: 5%;
+    }
+  }
+  .sidebar {
+    width: 20%;
+  }
+  
+}

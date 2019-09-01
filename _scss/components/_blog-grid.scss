@@ -52,7 +52,7 @@
   .blog-group {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+   
   }
   
   .blog-image {
@@ -64,12 +64,25 @@
   
   .blog-item {
     flex-basis: 48%;
+    align-content: flex-start;
     margin-bottom: 3em;
+    margin-right: (8% / 2);
+
+    &:nth-child(2n) {
+      margin-right: 0em;
+    }
   }
 }
 
 @media(min-width: $bp-lg) {
   .blog-item {
     flex-basis: 30%;
+    margin-right: (10% / 2);
+    &:nth-child(2n) {
+      margin-right: (10% / 2);
+    }
+    &:nth-child(3n) {
+      margin-right: 0em;
+    }
   }
 }
