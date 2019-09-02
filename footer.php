@@ -14,10 +14,7 @@
 					<?php get_template_part('partials/logo'); ?>
 				</a>
 				<div class="contact-info">
-					<ul>
-						<li><span>T:</span> <a href="">619 433 8428</a> </li>
-						<li><span>E:</span> <a href="mailto:hello@peakinteractive.com">hello@peakinteractive.com</a> </li>
-					</ul>
+					<?php get_template_part('partials/company-info'); ?>
 				</div>
 			</div>
 
@@ -36,11 +33,7 @@
 			<div class="footer-nav footer-el social-list-item">
 				<hr class="footer-hr">
 				<nav>
-					<ul>
-						<li><a href="">Instagram</a></li>
-						<li><a href="">Facebook</a></li>
-						<li><a href="">Behance</a></li>
-					</ul>
+					<?php get_template_part('partials/social-media'); ?>
 				</nav>
 			</div>
 
