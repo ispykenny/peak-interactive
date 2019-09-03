@@ -22,6 +22,7 @@
 
 .blog-item {
   flex-basis: 30%;
+  display: inline-block;
   margin-bottom: 2em;
   text-decoration: none;
   font-weight: lighter;
@@ -43,6 +44,7 @@
 }
 
 .single-post .read-more-link {
+  // h4 {}
   margin-top: 0px;
 }
 
