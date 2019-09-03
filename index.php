@@ -6,18 +6,21 @@
 
 
 
-<header>
+<header class="home-hdr">
 	<div class="inner">
 		<div class="content-area hdr-content">
-			<div class="hdr-el">
+			<div class="hdr-el green">
 				<h1>We Are Peak Interactive</h1>
 			</div>
 			<div class="hdr-el">
-				<p>Web Design <span class="dot-spacers"></span> Digital Branding <span class="dot-spacers"></span> Marketing</p>
+				<p>We help busy agencies and companies like yours expand their digital asset production capacity with the things you need but may not have the bandwidth to supply consistently or of peak quality.</p>
 			</div>
-			<div class="hdr-el">
+			<div class="hdr-el flex-cta">
 				<a href="" class="cta">
-					Learn More
+					View our Services
+				</a>
+				<a href="">
+					Browse our work
 				</a>
 			</div>
 		</div>
@@ -26,45 +29,7 @@
 </header>
 
 <div class="main">
-	<section class="default-block">
-		<div class="inner">
-			<div class="content-area">
-				<h4 class="section-hdr">Section Element</h4>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aut quam voluptatum voluptatem, itaque consectetur dicta totam tempore eligendi velit, eum similique optio animi amet ea dolores saepe laboriosam suscipit!</p>
-			</div>
-		</div>
-	</section>
 
-
-	<section class="default-block">
-		<div class="inner">
-			<div class="content-area">
-				<h4 class="section-hdr">Section Element</h4>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aut quam voluptatum voluptatem, itaque consectetur dicta totam tempore eligendi velit, eum similique optio animi amet ea dolores saepe laboriosam suscipit!</p>
-				<div style="max-width: 700px; margin: auto;">
-					<img src="" alt="" class="lazy-img" style="width: 100%;" data-src="<?php echo "$root/dist/assets/images/header.jpg"; ?>">
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="default-block">
-		<div class="inner">
-			<div class="content-area">
-				<h4 class="section-hdr">Section Element</h4>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aut quam voluptatum voluptatem, itaque consectetur dicta totam tempore eligendi velit, eum similique optio animi amet ea dolores saepe laboriosam suscipit!</p>
-			</div>
-		</div>
-	</section>
-
-	<section class="default-block">
-		<div class="inner">
-			<div class="content-area">
-				<h4 class="section-hdr">Section Element</h4>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aut quam voluptatum voluptatem, itaque consectetur dicta totam tempore eligendi velit, eum similique optio animi amet ea dolores saepe laboriosam suscipit!</p>
-			</div>
-		</div>
-	</section>
 </div>
 
 <?php get_footer(); ?>
