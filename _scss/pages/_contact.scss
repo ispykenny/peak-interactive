@@ -104,6 +104,10 @@
 
 .blurb-section  {
 
+  p {
+    max-width: 600px;
+  }
+
   ul {
     list-style-type: none;
     margin: 0; padding: 0;
@@ -128,6 +132,9 @@
 
 
 @media(min-width: $bp-md ) {
+  .blurb-section {
+    padding-bottom: 0.5em;
+  }
   .flex-contact {
     display: flex;
   }

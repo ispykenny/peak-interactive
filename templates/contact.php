@@ -22,10 +22,10 @@
   <div class="inner flex-contact">
     <div class="contact-blurb">
       <div class="blurb-section">
-        <h4>PEAK INTERACTIVE is located in beautiful Temecula, CA.</h4>
+        <h4><span class="green">Peak Interactive LLC</span> is located in beautiful Temecula, CA.</h4>
         <p>If you think we can work together or if you just want a recommendation on a good bottle of wine, we’d love to hear from you! So, drop us a line and we’ll get back to you.</p>
-        <hr class="contact-hr">
       </div>
+      <hr class="contact-hr">
       <div class="blurb-section company-sec info-li">
         <?php get_template_part('partials/company-info'); ?>
       </div>
