@@ -9,6 +9,9 @@
 <header class="home-hdr">
 	<div class="inner">
 		<div class="content-area hdr-content">
+			<div class="hr-parent">
+				<div class="hr"></div>
+			</div>
 			<div class="hdr-el green">
 				<h1>We Are Peak Interactive</h1>
 			</div>
@@ -19,7 +22,7 @@
 				<a href="" class="cta">
 					View our Services
 				</a>
-				<a href="">
+				<a href="" class="cta secondary">
 					Browse our work
 				</a>
 			</div>

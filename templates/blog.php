@@ -22,6 +22,7 @@
 
 
 
+<div class="main">
 
 <section class="default-block">
   <div class="inner">
@@ -39,5 +40,6 @@
 </section>
 
 
+</div>
 
 <?php get_footer(); ?>

@@ -7,8 +7,8 @@ header {
 
 .home-hdr {
   .hdr-content {
-    margin: 0;
-    text-align: left;
+    margin: auto;
+    text-align: center;
 
     p {
       margin-left: 0;
@@ -17,6 +17,7 @@ header {
 
   }
 }
+
 .hdr-content {
   padding: 7em 0em 6em 0em;
   color: white;
@@ -54,7 +55,6 @@ header {
   }
 
   p {
-    max-width: 900px;
     margin-top: 0.2em;
     margin-right: auto;
     margin-left: auto;
@@ -67,8 +67,8 @@ header {
   }
   .home-hdr {
     .hdr-content {
-      margin: 0;
-      text-align: left;
+      margin: auto;
+      text-align: center;
     }
   
     .hdr-content p {
@@ -101,12 +101,22 @@ header {
 }
 
 .flex-cta {
+  margin: auto;
   display: flex;
+  justify-content: center;
   align-items: center;
+
+  a {
+    &:first-of-type {
+      margin-right: 45px;
+    }
+    &::last-of-type {
+      margin-left: 45px;
+    }
+  }
 
   a:last-of-type {
     color: white;
-    margin-left: 25px;
     margin-top: 15px;
     position: relative;
     text-decoration: none;

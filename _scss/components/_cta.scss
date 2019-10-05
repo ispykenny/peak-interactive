@@ -7,6 +7,8 @@
   font-weight: 700;
   font-size: 1em;
   border: 2px solid $green;
+  overflow: hidden;
+  border-radius: 4px;
 
   &:hover {
     .cta-bg {
@@ -17,10 +19,18 @@
       }
     }
   }
+
+  &.secondary {
+    color: black !important;
+    background: white;
+    border: 1px solid white;
+    &:after {
+      display: none;
+    }
+  }
 }
 
 .cta-bg {
-  border-radius: 2px;
   background: transaprent;
   position: absolute;
   top: 0;

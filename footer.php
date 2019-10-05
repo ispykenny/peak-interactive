@@ -10,7 +10,7 @@
 		<div class="inner__inner flexing-footer">
 
 			<div class="footer-bio footer-el">
-				<a href="" class="footer-logo">
+				<a href="<?php echo site_url(''); ?>" class="footer-logo">
 					<?php get_template_part('partials/logo'); ?>
 				</a>
 				<div class="contact-info">

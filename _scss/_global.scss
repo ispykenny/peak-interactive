@@ -2,8 +2,7 @@
   padding: 2em 0em;
   position: relative;
   z-index: 99;
-  background: $dark;
-  color: white;
+  background: white;
 }
 
 .section-hdr {
@@ -19,12 +18,15 @@
 }
 
 .content-area {
+
   .section-hdr {
     margin-top: 0em;
   }
+
   p:last-of-type {
     margin-bottom: 0em;
   }
+
 }
 
 .center {
@@ -38,4 +40,23 @@
 .main-header {
   font-size: 32px;
   text-transform: uppercase;
+}
+
+.hr {
+  height: 6px;
+  background: $green;
+  width: 50px;
+  position: relative;
+  margin: auto;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 6px;
+    width: 15px;
+    right: -25px;
+    top: 0;
+    background: $green;
+  }
+
 }

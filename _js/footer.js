@@ -16,6 +16,7 @@ const resizeFooterMargin = () => {
   }
 }
 
+
 const addFooterMargin = () => {
   if(!$s.$navBtn.is(":visible")) {
     $s.$main.css({
